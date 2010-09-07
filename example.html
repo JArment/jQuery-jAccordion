@@ -6,52 +6,23 @@
 <title>Accordion 1</title> 
  
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-<script src="jquery.jAccordion.js"></script> 
+<script src="js/jquery.jAccordion.js"></script> 
 <script>
 $(function(){
 	$('.accordion').jAccordion();
 });
 </script>
 
-<style> 
-body {
-	margin: 10px auto;
-	width: 570px;
-	font: 75%/120% Arial, Helvetica, sans-serif;
-}
-.accordion {
-	border-bottom: solid 1px #c4c4c4;
-	width: 480px;
-}
-.accordion .panel {
-	background: #f7f7f7;
-	border: solid 1px #c4c4c4;
-	border-bottom: none;
-	padding: 0 10px 10px;
-}
-.accordion h3 {
-	background: #e9e7e7 url(images/arrow-square.gif) no-repeat right -51px;
-	padding: 7px 15px;
-	margin: 0 -10px -10px;
-	font: bold 120%/100% Arial, Helvetica, sans-serif;
-	cursor: pointer;
-}
-.accordion h3:hover {
-	background-color: #e3e2e2;
-}
-.accordion .active h3 {
-	margin-bottom: 10px;
-}
-section { display: block; }
-</style> 
+<link href="css/style.css" rel="stylesheet" media="screen,projection" />
+
 </head> 
  
 <body> 
 
-<h1>Jim's first jQuery Plugin</h1>
-<p>I spent alot of time working on this plugin. I kept reading tutorials, but didn't fully understand them. Fortunately the fine folks at Nettuts had a tutorial for someone just like me.</p>
+<h1>Jim's first jQuery Plugin, jAccordion</h1>
+<p>I spent a lot of time working on this plugin. I know it's not ground breaking, and jQuery UI alread accomplishes this, but I need a place to start with my jQuery plugins. Thank you to the fine folks at Nettuts for the tutorial that made the jQuery plugin principles stick for me.</p>
 
-<h3>The process.</h3>
+<h2>The Demo.</h2>
 
 <div class="accordion"> 
 	<section class="panel">
