@@ -12,6 +12,7 @@
  * Example usage:
  * $('.accordion').jAccordion({
  *   activePanel: 0, zero would be the first panel
+ *   headingTag: 'h3', 
  * });
  */ 
 (function($){
@@ -20,7 +21,9 @@
 			//Create default properties
 			defaults = {
 				//If no activePanel is identified, plugin will default to the first panel
-				activePanel: 0
+				activePanel: 0,
+				//If not specified, the defualt heading tag will be h3
+				headingTag: 'h3'
 			},
 			//Combine default properties with the user-specified properties
 			settings = $.extend(defaults, options);
@@ -31,11 +34,11 @@
 			//Assign the active panel as the first element
 			$this.find('.panel').eq(settings.activePanel).addClass('active');
 			//Hide all panels that are not active
-			$this.find('.panel:not(.active) *:not(h3)').hide();
+			$this.find('.panel:not(.active) *').not(settings.headingTag).hide();
 
-			$this.find('h3').click(function(){
+			$this.find(settings.headingTag).click(function(){
 				//Hide content of the previously active panel
-				$this.find('.active *:not(h3)').hide();
+				$this.find('.active *').not(settings.headingTag).hide();
 				//Remove the "active" class from all the panel
 				$this.find('.active').removeClass('active');
 				
